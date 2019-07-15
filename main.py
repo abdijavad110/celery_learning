@@ -11,10 +11,14 @@ from celery import group, chain, chord
 # k = app.control.inspect(['worker2@javad-surfbook'])
 
 
-for i in range(10):
-    s1 = add.signature((i, 1))
-    scheduler.apply_async([s1])
 
+
+# for i in range(10):
+#     s1 = add.signature((i, 1))
+#     scheduler.apply_async([s1])
+
+
+add.apply_async((1, 2))
 
 
 
